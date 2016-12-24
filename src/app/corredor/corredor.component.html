@@ -3,7 +3,8 @@
   <div class="navbar navbar-default">
     <div class="navbar-header">
       <a class="navbar-brand navbar-brand-center" href="">
-        <img class="navbar-brand-logo" src="assets/img/logo-inverse.svg" alt="Elephant">
+        <h3 class="panel-title text-capitalize fw-l">INSUREX</h3>
+        <!--<img class="navbar-brand-logo" src="assets/img/logo-inverse.svg" alt="Elephant">-->
       </a>
       <button class="navbar-toggler visible-xs-block collapsed" type="button" data-toggle="collapse" data-target="#sidenav">
         <span class="sr-only">Toggle navigation</span>
@@ -114,24 +115,24 @@
                 </div>
               </form>
             </li>
-            <li class="sidenav-heading">Navigation</li>
-            <li class="sidenav-item has-subnav active">
-              <a href="dashboard-1.html" aria-haspopup="true">
+            <li class="sidenav-heading">Navegación</li>
+            <li class="sidenav-item">
+              <a [routerLink]="['dashboard']" aria-haspopup="true">
                 <span class="sidenav-icon icon icon-home"></span>
-                <span class="sidenav-label">Dashboards</span>
+                <span class="sidenav-label">Dashboard</span>
               </a>
-              <ul class="sidenav-subnav collapse">
-                <li class="sidenav-subheading">Dashboards</li>
-                <li class="active"><a href="dashboard-1.html">Dashboard 1</a></li>
-                <li><a href="dashboard-2.html">Dashboard 2</a></li>
-                <li><a href="dashboard-3.html">Dashboard 3</a></li>
-              </ul>
+            </li>
+            <li class="sidenav-heading">Módulos</li>
+            <li class="sidenav-item">
+              <a [routerLink]="['cuentas']">
+                <span class="sidenav-icon icon icon-file-text"></span>
+                <span class="sidenav-label">Cuentas de Clientes</span>
+              </a>
             </li>
             <li class="sidenav-item">
-              <a href="widgets.html">
-                <span class="badge badge-success">26</span>
-                <span class="sidenav-icon icon icon-th"></span>
-                <span class="sidenav-label">Widgets</span>
+              <a [routerLink]="['docs']">
+                <span class="sidenav-icon icon icon-money"></span>
+                <span class="sidenav-label">Documentos de Clientes</span>
               </a>
             </li>
           </ul>

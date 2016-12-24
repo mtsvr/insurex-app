@@ -1,3 +1,62 @@
-<p>
-  docs-pend works!
-</p>
+<div class="row">
+  <div class="col-sm-offset-1 col-xs-10">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Documentos Pendientes</h3>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel turpis eu augue scelerisque ornare id eget lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin porttitor maximus efficitur. In consectetur vel urna at interdum. In hac habitasse platea dictumst. Ut rhoncus, justo a accumsan gravida, sapien lacus tincidunt est, condimentum ultrices nisi nibh ut arcu. Donec in feugiat magna. Cras et tortor pharetra, egestas massa a, consectetur arcu. Nunc vestibulum felis elit, eu ultricies arcu aliquam at.
+        </p>
+      </div>
+      <div class="card-footer">
+        <div class="row gutter-xs">
+          <div class="col-sm-6">
+            <button class="btn btn-lg btn-block btn-outline-info" [ngClass]="{active: active}" (click)="setPolizas()">Pólizas</button>
+          </div>
+          <div class="col-sm-6">
+            <button class="btn btn-lg btn-block btn-outline-info" [ngClass]="{active: !(active)}" (click)="setEndosos()">Endosos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-offset-1 col-xs-10">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+            <tr class="bg-instagram">
+              <th>Numero</th>
+              <th>Estado</th>
+              <th>Ver Documento</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let doc of docs">
+              <td>{{doc.numero}}</td>
+              <td>
+                <span class="label label-pill"
+                        [ngClass]="{'label-info':(doc.estado == 'pendiente'), 'label-success':(doc.estado == 'emitido'), 'label-danger':(doc.estado == 'rechazado')}">
+                {{doc.estado}}
+                </span>
+              </td>
+              <td><a class="btn btn-outline-info btn-block" href={{doc.pdfUrl}}><span class="icon icon-lg icon-chevron-down"></span></a></td>
+              <td>
+                <div class="btn-group-sm">
+                  <button class="btn btn-danger btn-sm"><span class="icon icon-fw icon-times"></span></button>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

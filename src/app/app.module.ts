@@ -30,6 +30,7 @@ import { DocsClienteComponent } from './corredor/docs-cliente/docs-cliente.compo
 import { AdminComponent } from './admin/admin.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { CuentasCorredorComponent } from './admin/cuentas-corredor/cuentas-corredor.component';
+import {AuthService} from "./services/auth.service";
 
 
 
@@ -63,7 +64,7 @@ import { CuentasCorredorComponent } from './admin/cuentas-corredor/cuentas-corre
     HttpModule,
     RoutingModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

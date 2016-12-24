@@ -1,33 +1,22 @@
 <div class="login">
   <div class="login-body">
     <a class="login-brand" href="index.html">
-      <img class="img-responsive" src="assets/img/logo.svg" alt="Elephant">
+      <h1 class="text-center panel-title text-capitalize fw-l">INSUREX</h1>
+      <!--<img class="img-responsive" src="assets/img/logo.svg" alt="Elephant">-->
     </a>
-    <h3 class="login-heading">Sign in</h3>
+    <h3 class="login-heading">Iniciar Sesión</h3>
     <div class="login-form">
-      <form data-toggle="md-validator">
+      <div>
         <div class="md-form-group md-label-floating">
-          <input class="md-form-control" type="email" name="email" spellcheck="false" autocomplete="off" data-msg-required="Please enter your email address." required>
-          <label class="md-control-label">Email</label>
+          <input class="md-form-control" type="text" name="rut" [(ngModel)]="user.rut" spellcheck="false" autocomplete="off" data-msg-required="" required>
+          <label class="md-control-label">Rut</label>
         </div>
         <div class="md-form-group md-label-floating">
-          <input class="md-form-control" type="password" name="password" minlength="6" data-msg-minlength="Password must be 6 characters or more." data-msg-required="Please enter your password." required>
-          <label class="md-control-label">Password</label>
+          <input class="md-form-control" type="password" name="password" [(ngModel)]="user.pwd" minlength="4" data-msg-minlength="Password must be 6 characters or more." data-msg-required="Please enter your password." required>
+          <label class="md-control-label">Contraseña</label>
         </div>
-        <div class="md-form-group md-custom-controls">
-          <label class="custom-control custom-control-primary custom-checkbox">
-            <input class="custom-control-input" type="checkbox" checked="checked">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-label">Keep me signed in</span>
-          </label>
-          <span aria-hidden="true"> · </span>
-          <a href="password-3.html">Forgot password?</a>
-        </div>
-        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+        <button class="btn btn-primary btn-block" (click)="login()">Iniciar Sesión</button>
+      </div>
     </div>
-  </div>
-  <div class="login-footer">
-    Don't have an account? <a href="signup-3.html">Sign Up</a>
   </div>
 </div>
