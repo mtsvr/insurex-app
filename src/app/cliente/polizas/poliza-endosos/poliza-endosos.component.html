@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="card">
+      <div class="card-body">
+        <div class="panel">
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-middle">
+                <thead>
+                <tr class="bg-info">
+                  <th>Numero</th>
+                  <th>Resumen</th>
+                  <th>Documento</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let endoso of endosos">
+                  <td>{{endoso.numero}}</td>
+                  <td>{{endoso.resumen}}</td>
+                  <td><a class="btn btn-success btn-block" href={{endoso.pdfUrl}}><span class="icon icon-lg icon-chevron-down"></span></a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

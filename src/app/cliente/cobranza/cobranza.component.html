@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+
+  </div>
+  <div class="card-body">
+
+  </div>
+  <div class="card-footer">
+    <div class="row gutter-xs">
+      <div class="col-sm-6">
+        <button class="btn btn-lg btn-block btn-outline-danger" [ngClass]="{active: active}" (click)="setPorVencer()">Cuotas Activas</button>
+      </div>
+      <div class="col-sm-6">
+        <button class="btn btn-lg btn-block btn-outline-danger" [ngClass]="{active: !(active)}" (click)="setVencidas()">Cuotas Vencidas</button>
+      </div>
+    </div>
+  </div>
+</div>

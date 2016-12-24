@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-10 col-sm-offset-1">
+    <div class="card" *ngFor="let poliza of polizas">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="card-header">
+            <div class="p-x">
+              <h3 class="card-title fw-l"><small>Póliza N°</small><a class="link-muted" [routerLink]="['./',poliza.id]">{{poliza.numero}}</a></h3>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="col-sm-9">
+              <p class="card-text">
+                {{poliza.ramo}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card-header no-border"></div>
+          <div class="card-body">
+            <div class="btn-toolbar">
+              <div class="btn-group btn-group-sm">
+                <button class="btn btn-primary" [routerLink]="['./',poliza.id]"><span class="icon icon-eye"></span></button>
+                <button class="btn btn-outline-primary" [routerLink]="[poliza.id,'cuotas']"><span class="icon icon-usd"></span></button>
+                <button class="btn btn-info" [routerLink]="[poliza.id,'endosos']"><span class="icon icon-folder-open-o"></span></button>
+                <a class="btn btn-outline-warning" href="{{poliza.pdfUrl}}"><span class="icon icon-chevron-down"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

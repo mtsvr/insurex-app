@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title fw-l"><small>Póliza N°</small>{{poliza.numero}}</h3>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item no-border">
+            <h5 class="card-text"><small class="text-muted">Ramo:</small>{{poliza.ramo}}</h5>
+          </li>
+          <li class="list-group-item no-border">
+            <h5 class="card-text"><small class="text-muted">Prima:</small>{{poliza.prima}}</h5>
+          </li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div class="row gutter-xs">
+          <div class="col-sm-4">
+            <button class="btn btn-lg btn-block btn-primary" [routerLink]="['./']"><span class="icon icon-eye"></span></button>
+          </div>
+          <div class="col-sm-4">
+            <button class="btn btn-lg btn-block btn-outline-primary" [routerLink]="['./cuotas']"><span class="icon icon-usd"></span></button>
+          </div>
+          <div class="col-sm-4">
+            <button class="btn btn-lg btn-block btn-info" [routerLink]="['./endosos']"><span class="icon icon-folder-open-o"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
